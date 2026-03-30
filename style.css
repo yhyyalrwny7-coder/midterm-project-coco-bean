@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* for BLURRED BACKGROUND */
+.login-bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('images/coc12.gif'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    -webkit-filter: blur(8px);
+    z-index: -1; 
+    transform: scale(1.1); 
+}
+
+#login-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Project Name in the Middle */
+.project-logo-large {
+    font-size: 4rem;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+    margin-bottom: 40px;
+}
+
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 450px; 
+}
+
+.login-header {
+    font-size: 2rem;
+    color: #3e2723; 
+    margin-bottom: 10px;
+}
+
+.login-instruction {
+    color: #5d4037;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.dark-brown-text {
+    color: #3e2723; /* for labels */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #3e2723; 
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #3e2723;
+    background-color: #ffffff;
+}
+
+.login-box input::placeholder {
+    color: #a1887f; 
+}
+
+.login-btn {
+    background-color: #3e2723; 
+    color: #ffffff;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #5d4037;
+}
+
+
+#main-interface {
+    background-color: #2b1b17;
+    min-height: 100vh;
+}
+
+
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background-color: #1a100d; border-bottom: 1px solid #4e342e; }
+nav .logo { color: #d4af37; font-size: 24px; font-weight: bold; }
+nav ul { display: flex; list-style: none; gap: 25px; }
+nav ul li a { color: #ffffff; text-decoration: none; }
+nav .logout-btn { background-color: #d4af37; color: #1a100d; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+header { text-align: center; padding: 60px 20px; }
+.white-text { color: #ffffff; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; padding: 40px 8%; }
+.product-card { background: #3e2723; padding: 20px; border-radius: 15px; text-align: center; border: 1px solid #4e342e; transition: 0.3s; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; }
+.gold-text { color: #d4af37; margin-top: 15px; }
+.order-btn { background-color: #d4af37; color: #2b1b17; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+@media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }

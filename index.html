@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cocoa Bean | Staff Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-bg-image"></div>
+
+    <div id="login-container">
+        
+        <h1 class="project-logo-large">The Cocoa Bean</h1>
+
+        <div class="login-box">
+           <h2 class="login-header">Welcome, Prf. Deniz 👨‍💻</h2>
+            
+            <p class="login-instruction">Enter credentials to access the shop.</p>
+            
+            <div class="input-group">
+                <label for="username" class="dark-brown-text">Username</label>
+                <input type="text" id="username" placeholder="e.g., admin">
+            </div>
+            
+            <div class="input-group">
+                <label for="password" class="dark-brown-text">Password</label>
+                <input type="password" id="password" placeholder="e.g., 1234">
+            </div>
+            
+            <button class="login-btn" onclick="checkLogin()">Login</button>
+            <p id="error-message" style="color: red; display: none; margin-top: 15px;">Invalid Credentials!</p>
+        </div>
+    </div>
+
+    <div id="main-interface" style="display: none;">
+        <nav>
+            <div class="logo">The Cocoa Bean</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><button class="logout-btn" onclick="logout()">Logout</button></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1 class="white-text">Artisanal Chocolate Collection</h1>
+            <p class="white-text">Welcome to the world of premium cocoa.</p>
+        </header>
+
+        <main>
+            <section class="shop-section">
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="images/coc11.gif" alt="Chocolate 1">
+                        <h3 class="gold-text">Classic Dark</h3>
+                        <p class="white-text">$5.50</p>
+                        <button class="order-btn" onclick="orderSuccess('Classic Dark')">Order Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/coc10.gif" alt="Chocolate 2">
+                        <h3 class="gold-text">Milk Velvet</h3>
+                        <p class="white-text">$4.50</p>
+                        <button class="order-btn" onclick="orderSuccess('Milk Velvet')">Order Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/coc12.gif" alt="Chocolate 3">
+                        <h3 class="gold-text">Hazelnut Gold</h3>
+                        <p class="white-text">$6.00</p>
+                        <button class="order-btn" onclick="orderSuccess('Hazelnut Gold')">Order Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/coc14.gif" alt="Chocolate 4">
+                        <h3 class="gold-text">Caramel Silk</h3>
+                        <p class="white-text">$5.00</p>
+                        <button class="order-btn" onclick="orderSuccess('Caramel Silk')">Order Now</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/coc13.gif" alt="Chocolate 5">
+                        <h3 class="gold-text">White Truffle</h3>
+                        <p class="white-text">$6.50</p>
+                        <button class="order-btn" onclick="orderSuccess('White Truffle')">Order Now</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
